@@ -1,0 +1,106 @@
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import Tilt from "react-parallax-tilt";
+import {
+  AiFillGithub,
+  AiOutlineTwitter,
+  AiFillInstagram,
+} from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
+import desk_photo from "../../Assets/Projects/desk.jpeg";
+
+const Home2 = () => {
+  return (
+    <Container fluid className="home-about-section" id="about">
+      <Container>
+        <Row>
+          <Col md={8} className="home-about-description">
+            <h1 style={{ fontSize: "2.6em" }}>
+              ALLOW ME TO <span className="purple"> INTRODUCE </span> MYSELF
+            </h1>
+            <p className="home-about-body">
+              My name is Nathan Praglin and I am a life-long learner.
+              <br />
+              <br />I'm passionate about all things technology and I enjoy solving complex problems. I'm skilled in coding, network security, and ethical hacking. There's no problem I can't solve!
+              <br />
+              <br />I'm constantly expanding my knowledge base, but my two favorite programming languages are 
+              <i>
+                <b className="purple"> JavaScript and Python. </b>
+              </i>
+              <br />
+              <br />
+              I like to stay modernized, which is why I've incorporated 
+              {/* <b className="purple"> Node.js</b> and
+              <i> */}
+                <b className="purple">
+                  {" "}
+                  Modern JavaScript Libraries and Frameworks
+                </b>
+              {/* </i> */}
+              &nbsp; like
+              <i>
+                <b className="purple"> Express, React, and Node.</b>
+              </i>
+            </p>
+          </Col>
+          <Col md={4} className="myAvtar">
+            <Tilt>
+              <img src={desk_photo} className="img-fluid rounded-circle" alt="avatar" />
+            </Tilt>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={12} className="home-about-social">
+            <h1>FIND ME ON</h1>
+            <p>
+              Feel free to <span className="purple">connect </span>with me
+            </p>
+            <ul className="home-about-social-links">
+              <li className="social-icons">
+                <a
+                  href="https://github.com/NPraglin"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
+                >
+                  <AiFillGithub />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://twitter.com/MotivateFocuss"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
+                >
+                  <AiOutlineTwitter />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://www.linkedin.com/in/nathan-praglin-494ba1178/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
+                >
+                  <FaLinkedinIn />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href=" "
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour home-social-icons"
+                >
+                  <AiFillInstagram />
+                </a>
+              </li>
+            </ul>
+          </Col>
+        </Row>
+      </Container>
+    </Container>
+  );
+}
+export default Home2;
